@@ -51,7 +51,7 @@ pip install torch torchvision torchaudioindex-url https://download.pytorch.org/w
 # 5. Generate images in the style of hippojabe
 #### Modify the prompt on line 6 to generate different images
 ```
-python .\generateImg.py
+python .\GenerateImg.py
 ```
 
 # Reference 
