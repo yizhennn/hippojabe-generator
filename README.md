@@ -22,8 +22,9 @@ pip install -r requirements.txt
 # 2. Set up a default configuration for Accelerate
 #### Accelerate is a library developed by Hugging Face designed to simplify and optimize the training and inference of machine learning models, particularly in distributed and multi-device environments. It provides tools to make it easier to run training and inference tasks across different hardware setups, such as CPUs, GPUs, and TPUs.
 
+```
 accelerate config default
-
+```
 # 3. Launch the DreamBooth training process using the Accelerate library
 ```
 accelerate launch ./diffusers/examples/dreambooth/train_dreambooth.py \
