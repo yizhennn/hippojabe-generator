@@ -25,12 +25,14 @@ pip install -r requirements.txt
 ```
 accelerate config default
 ```
-# 3. Launch the DreamBooth training process using the Accelerate library
+# 3. Adding images in ./inputdata 
+
+# 4. Launch the DreamBooth training process using the Accelerate library
 ```
 accelerate launch ./diffusers/examples/dreambooth/train_dreambooth.py \
-  --pretrained_model_name_or_path="C:\jabbe\stable-diffusion-v1-5" \
-  --instance_data_dir="C:\jabbe\archive" \
-  --output_dir="C:\jabbe\model" \
+  --pretrained_model_name_or_path="C:\hippojabe-generator\stable-diffusion-v1-5" \
+  --instance_data_dir="C:\hippojabe-generator\inputdata" \
+  --output_dir="C:\hippojabe-generator\tunedmodel" \
   --instance_prompt="in the style of hippojabe" \
   --resolution=512 \
   --train_batch_size=1 \
@@ -40,7 +42,7 @@ accelerate launch ./diffusers/examples/dreambooth/train_dreambooth.py \
   --lr_warmup_steps=0 \
   --max_train_steps=400
 ```
-# And Wait~ for it (Barney smile)
+### And Wait~ for it (Barney smile)
 
 # 4. Install the CUDA Version of PyTorch
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
@@ -48,11 +50,11 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 # 5. Generate images in the style of hippojabe
 #### Modify the prompt on line 6 to generate different images
 ```
-python .\GenerateImg.py
+python .\generateImg.py
 ```
 
 # Reference 
 - https://huggingface.co/runwayml/stable-diffusion-v1-5?
--https://huggingface.co/docs/diffusers/v0.11.0/en/training/dreambooth
--https://blog.csdn.net/weixin_47748259/article/details/136031863
--https://medium.com/thedeephub/i-cloned-my-cousins-drawing-style-223a1fd4b093
+- https://huggingface.co/docs/diffusers/v0.11.0/en/training/dreambooth
+- https://blog.csdn.net/weixin_47748259/article/details/136031863
+- https://medium.com/thedeephub/i-cloned-my-cousins-drawing-style-223a1fd4b093
