@@ -29,23 +29,24 @@ accelerate config default
 
 # 4. Launch the DreamBooth training process using the Accelerate library
 ```
-accelerate launch ./diffusers/examples/dreambooth/train_dreambooth.py \
-  --pretrained_model_name_or_path="C:\hippojabe-generator\stable-diffusion-v1-5" \
-  --instance_data_dir="C:\hippojabe-generator\inputdata" \
-  --output_dir="C:\hippojabe-generator\tunedmodel" \
-  --instance_prompt="in the style of hippojabe" \
-  --resolution=512 \
-  --train_batch_size=1 \
-  --gradient_accumulation_steps=1 \
-  --learning_rate=5e-6 \
-  --lr_scheduler="constant" \
-  --lr_warmup_steps=0 \
-  --max_train_steps=400
+accelerate launch ./diffusers/examples/dreambooth/train_dreambooth.py  \
+--pretrained_model_name_or_path="C:\hippojabe-generator\stable-diffusion-v1-5"  \
+--instance_data_dir="C:\hippojabe-generator\InputImages" \
+--output_dir="C:\hippojabe-generator\TunedModel" \
+--instance_prompt="in the style of hippojabe" \
+--resolution=512 \
+--train_batch_size=1 \
+--gradient_accumulation_steps=1 \
+--learning_rate=5e-6 \
+--lr_scheduler="constant" \
+--lr_warmup_steps=0 \
+--max_train_steps=400 
+
 ```
 ### And Wait~ for it (Barney smile)
 
 # 4. Install the CUDA Version of PyTorch
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install torch torchvision torchaudioindex-url https://download.pytorch.org/whl/cu118
 
 # 5. Generate images in the style of hippojabe
 #### Modify the prompt on line 6 to generate different images
